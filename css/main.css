@@ -1,0 +1,528 @@
+@charset "utf-8";
+/*共通*/
+a:hover{
+  text-decoration:none;
+  color:#fff;
+}
+
+:root{
+  --serif: 'Shippori Mincho B1', serif;
+  --sans_serif:'Noto Sans JP', sans-serif;
+}
+
+.nav-active{
+  font-weight:bold;
+  color:#333;
+}
+
+.animated{
+  opacity:0;
+}
+
+main{
+  padding-top:5rem;
+}
+
+/*header*/
+
+
+header{
+  background: rgba(204,204,204,.85);
+  width:100%;
+  position:fixed;
+  top:0;
+  z-index:10;
+}
+
+.logo{
+  max-width: 150px;
+  margin-left: 3rem;
+}
+
+@media screen and (max-width:960px){
+  .logo{
+    margin-left: 1rem;
+    max-width: 100px;
+  }
+  
+  .nav-item{
+    font-size:.8rem;
+  }
+}
+
+.nav-item{
+  margin-left: 1rem;
+}
+
+/*footer*/
+footer{
+  height:10rem;
+  background: #ddd;
+  position:relative;
+}
+
+small{
+  display:block;
+  width:fit-content;
+  height:fit-content;
+  position:absolute;
+  margin:auto;
+  top:0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+/*index-main*/
+
+.hero{
+  width: 70%;
+  display:block;
+  margin:5% auto 10%;
+}
+
+body{
+  line-height:1.7;
+  letter-spacing: 1.7px; 
+  font-family:var(--sans_serif);
+  
+}
+
+.site-discription{
+  margin-bottom:20%;
+  max-width:1000px;
+  margin:0 auto;
+  padding:2em;
+  background:#ccc;
+}
+
+.site-discription h2{
+  margin-bottom: 20px;
+  padding-left:1rem;
+  font-size:1.7rem;
+  font-family:var(--serif);
+  
+}
+
+.site-discription p{
+  line-height:1.7;
+  letter-spacing: 1.7px;
+}
+
+/*section*/
+section{
+  max-width:1000px;
+  margin:10% auto;
+}
+
+.discription-wrap{
+  display:flex;
+  column-gap:3rem;
+}
+
+.index-wrap{
+  position:relative;
+  padding:2rem;
+  margin-top:10rem;
+}
+
+.text{
+  max-width:45%;
+  position:absolute;
+  top:0;
+}
+
+.discription{
+  max-width:45%;
+}
+
+.title{
+  margin-bottom: 5%;
+  border-left:5px solid #999;
+  padding-left:1rem;
+  font-family:var(--serif);
+}
+
+.discription-img{
+  background-image:url(../image/cat_and_woman.jpg);
+}
+.profile-img{
+  background-image:url(../image/bear_goron.jpg);
+}
+.sick-img{
+  background-image:url(../image/sick.jpg);
+}
+.money-img{
+  background-image:url(../image/money.jpg);
+}
+.mind-img{
+  background-image:url(../image/mind.jpg);
+}
+
+.index-img{
+  width:50%;
+  height:60vh;
+  background-position:center;
+  background-size:cover;
+  border-radius:5px;
+  object-fit: cover;
+  display:block;
+}
+
+@media screen and (max-width:960px){
+  .index-wrap{
+    display:flex;
+    flex-direction:column;
+    margin-top:3rem;
+  }
+  
+  .discription-wrap{
+    flex-direction:column;
+    margin-top:3rem;
+  }
+  
+  .text{
+    position:relative;
+    max-width:100%;
+  }
+  
+  .index-img{
+    width: 100%;
+    height: 300px;
+    margin-bottom:1rem;
+  }
+  
+  .discription{
+    max-width:100%;
+  }
+}
+
+.more{
+  padding:2px 5rem;
+  border:none;
+  display:block;
+  width:fit-content;
+  background:#333;
+  color:white;
+  border-radius:5px;
+  margin-top:2rem;
+}
+
+.index-wrap:nth-of-type(even) .text{
+  right:0;
+}
+
+.index-wrap:nth-of-type(odd) .index-img{
+  margin-left:auto;
+}
+
+/*profile*/
+.center-title{
+  text-align:center;
+  margin-bottom:5rem;
+  font-family:var(--serif);
+}
+
+@media screen and (max-width:960px){
+  .center-title{
+    font-size:1.5rem;
+  }
+}
+
+.fa-paw{
+  margin-right: 10px;
+}
+
+.profile-wrap{
+  display:flex;
+  justify-content:space-around;
+  column-gap:1rem;
+}
+
+@media screen and (max-width:540px){
+  .profile-title{
+    font-size:2rem;
+  }
+  
+  .profile-wrap{
+    flex-direction:column;
+  }
+}
+
+.profile-image{
+  background-image:url('../image/goron2.jpg');
+  background-position:center;
+  background-size:cover;
+  width: 400px;
+  height: 400px;
+  border-radius:50%;
+  display:block;
+  margin:0 auto 2rem;
+  object-fit: cover;
+}
+
+.text p {
+  text-shadow: 1px 4px 1px #ffffff;
+}
+
+
+
+
+@media screen and (max-width:540px){
+  .profile-image{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.profile-list{
+  padding:2rem 3rem;
+  border:2px solid #888;
+  border-radius:5px;
+  width:fit-content;
+}
+
+.sub-title{
+  margin-bottom:1rem;
+  padding-bottom:1rem;
+  border-bottom:2px solid #999;
+  width:fit-content;
+  margin-left :0;
+}
+
+.profile-list > li {
+  list-style:url(../image/paw-solid.svg);
+  line-height:2;
+}
+
+li.stylenone {
+  list-style: none;
+}
+
+#life{
+  background:#444;
+  color:#fff;
+  padding:2rem;
+}
+
+/*ギャラリー*/
+
+.gallery-title{
+  margin:0 auto;
+}
+
+.gallery{
+  justify-content:space-around;
+  gap:2rem;
+  margin:3rem 0;
+}
+
+.small-img{
+  width: 300px;
+  height: 300px;
+  box-shadow:3px 3px 10px #999;
+  object-fit: cover;
+  border-radius:5px;
+}
+
+/*sick*/
+.sick-title{
+  text-align:center;
+  margin-bottom:3rem;
+  margin-top:3rem;
+  font-family:var(--serif);
+}
+
+.sickImg{
+  width:40%;
+  height:30%;
+  object-fit:cover;
+  border-radius:5px;
+}
+
+.sick-content{
+  display:flex;
+  justify-content:space-around;
+}
+
+.sick-content p{
+  padding:1rem;
+  background: #ccc;
+  border-radius:5px;
+  width:50%;
+}
+
+@media screen and (max-width:960px){
+  .sick-content{
+    flex-direction:column;
+  }
+  
+  .sickImg{
+    width: 90%;
+    margin:0 auto 2rem;
+    display:block;
+  }
+  
+  .sick-content p{
+    width: 90%;
+    margin:0 auto;
+  }
+  
+  .sick-title{
+    font-size:1.7rem;
+  }
+}
+
+/*money*/
+.money-discription{
+  text-align: center;
+}
+
+.icons{
+  display:flex;
+  column-gap:3rem;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+
+.icon{
+  width: 200px;
+  height: 200px;
+  border-radius:50%;
+  color:#333;
+  text-shadow:1px 1px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+  background-size:cover;
+  background-position:center;
+}
+
+.icon:hover{
+  filter: brightness(80%);
+}
+
+.icons .active{
+  transform:scale(1.2);
+  color:#333;
+  font-size:1.2rem;
+  font-weight:bold;
+}
+
+@media screen and (max-width:960px){
+  
+  .icons{
+    column-gap:1rem;
+  }
+  .icon{
+    width: 150px;
+    height: 50px;
+    border-radius:5px;
+    font-size:.7rem;
+    object-fit: cover;
+  }
+  
+  .icon.active{
+    font-size:1rem;
+  }
+}
+
+#tab-icon-1{
+  background-image:url('../image/graph.jpg');
+}
+#tab-icon-2{
+  background-image:url('../image/cat_and_dr.jpg');
+}
+#tab-icon-3{
+  background-image:url('../image/bear_hannou.jpg');
+}
+
+.tabs-content > div{
+  display:none;
+}
+
+.money-text{
+  max-width:800px;
+  padding:2rem;
+  border-radius:5px;
+  background: #ccc;
+  margin:0 auto;
+}
+
+.money-text >h3{
+  font-family:var(--serif);
+  margin-bottom:2rem;
+  padding-bottom: 1rem;
+  border-bottom:2px solid #666;
+}
+
+/*mind*/
+
+.mind-hero-img{
+  width:100%;
+  height:65vh;
+  background-image: url('../image/bear2.jpg');
+  background-size:contain;
+  background-position:center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width:960px){
+  .mind-hero-img{
+    background-attachment:scroll;
+  }
+}
+
+.mind-text > p{
+  border-radius:5px;
+  background: #ccc;
+  padding:2rem;
+}
+
+.accordion-content{
+  display:none;
+  padding:2rem;
+}
+
+.accordion-content.active{
+  display:block;
+}
+
+.accordion-wrap{
+  margin:5rem 0;
+  background:#ccc;
+  border-radius:5px;
+  padding:1rem 2rem;
+}
+
+.last{
+  margin-bottom: 10rem;
+}
+
+.accordion-btn{
+  background:#333;
+  border-radius:5px;
+  display:block;
+  text-align:center;
+  color:#fff;
+}
+
+.accordion-title{
+  font-family:var(--serif);
+  margin:2rem 0;
+}
+
+.note{
+  color:#666;
+  font-size:.8rem;
+  display:block;
+}
+
+.omutsu{
+  width: 100%;
+  height:auto;
+  object-fit: cover;
+}
